@@ -2,7 +2,7 @@ const photos = [
     { label: 'Photo 1', src: '/photos/a1.jpeg' },
     { label: 'Photo 2', src: '/photos/a2.jpeg' },
     { label: 'Photo 3', src: '/photos/a3.jpeg' },
-    { label: 'Photo 4', src: '/photos/a5 (4).jpeg' },
+    { label: 'Photo 4', src: '/photos/a5 (4).jpg' },
     { label: 'Photo 5', src: '/photos/image-1.jpeg' },
     { label: 'Photo 6', src: '/photos/image-2.jpeg' },
     { label: 'Photo 7', src: '/photos/image-3.jpeg' },
