@@ -1,4 +1,6 @@
 import { X } from 'lucide-react'
+import { X } from 'lucide-react'
+import PropTypes from 'prop-types'
 
 function Lightbox({ imageUrl, onClose }) {
     if (!imageUrl) return null
@@ -24,5 +26,10 @@ function Lightbox({ imageUrl, onClose }) {
         </div>
     )
 }
+Lightbox.propTypes = {
+    imageUrl: PropTypes.string,
+    onClose: PropTypes.func.isRequired,
+}
+
 
 export default Lightbox
