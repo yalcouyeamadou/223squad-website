@@ -5,13 +5,15 @@ const photos = [
     { label: 'Photo 1', src: '/photos/a1.jpeg' },
     { label: 'Photo 2', src: '/photos/a2.jpeg' },
     { label: 'Photo 3', src: '/photos/a3.jpeg' },
-    { label: 'Photo 4', src: '/photos/a4.jpeg' },
-    { label: 'Photo 5', src: '/photos/a5.jpeg' },
-    { label: 'Photo 6', src: '/photos/a6.jpeg' },
-    { label: 'Photo 7', src: '/photos/a7.jpeg' },
-    { label: 'Photo 8', src: '/photos/a8.jpeg' },
-    { label: 'Photo 9', src: '/photos/a9.jpeg' },
-    { label: 'Photo 10', src: '/photos/a10.jpeg' },
+    { label: 'Photo 4', src: '/photos/a5(4).jpg' },
+    { label: 'Photo 5', src: '/photos/a5(5).jpg' },
+    { label: 'Photo 6', src: '/photos/a5(6).jpg' },
+    { label: 'Photo 7', src: '/photos/a5(7).jpg' },
+    { label: 'Photo 8', src: '/photos/a5(11).jpg' },
+    { label: 'Photo 9', src: '/photos/image-4.jpeg' },
+    { label: 'Photo 10', src: '/photos/image-1.jpeg' },
+    { label: 'Photo 11', src: '/photos/image-2.jpeg' },
+    { label: 'Photo 12', src: '/photos/image-3.jpeg' },
 ]
 
 function MediaCarousel() {
