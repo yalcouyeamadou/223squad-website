@@ -1,19 +1,22 @@
+import { useState } from 'react'
+import Lightbox from './Lightbox'
+
 const photos = [
     { label: 'Photo 1', src: '/photos/a1.jpeg' },
     { label: 'Photo 2', src: '/photos/a2.jpeg' },
     { label: 'Photo 3', src: '/photos/a3.jpeg' },
-    { label: 'Photo 4', src: '/photos/a5 (4).jpg' },
-    { label: 'Photo 5', src: '/photos/image-1.jpeg' },
-    { label: 'Photo 6', src: '/photos/image-2.jpeg' },
-    { label: 'Photo 7', src: '/photos/image-3.jpeg' },
-    { label: 'Photo 8', src: '/photos/image-4.jpeg' },
-    { label: 'Photo 9', src: '/photos/a5 (10).jpg' },
-    { label: 'Photo 10', src: '/photos/a5 (11).jpg' },
-    { label: 'Photo 11', src: '/photos/a5 (7).jpg' },
-    { label: 'Photo 12', src: '/photos/a5 (6).jpg' },
+    { label: 'Photo 4', src: '/photos/a4.jpeg' },
+    { label: 'Photo 5', src: '/photos/a5.jpeg' },
+    { label: 'Photo 6', src: '/photos/a6.jpeg' },
+    { label: 'Photo 7', src: '/photos/a7.jpeg' },
+    { label: 'Photo 8', src: '/photos/a8.jpeg' },
+    { label: 'Photo 9', src: '/photos/a9.jpeg' },
+    { label: 'Photo 10', src: '/photos/a10.jpeg' },
 ]
 
 function MediaCarousel() {
+    const [selected, setSelected] = useState(null)
+
     return (
         <div className="w-full py-10">
             <h2 className="text-2xl font-bold text-center mb-8">
@@ -22,18 +25,21 @@ function MediaCarousel() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-5xl mx-auto px-4">
                 {photos.map((photo, i) => (
-                    <div
+                    <button
                         key={i}
-                        className="aspect-square rounded-xl overflow-hidden bg-stone-900 border border-amber-800/30 hover:border-amber-500/60 transition-colors"
+                        onClick={() => setSelected(photo.src)}
+                        className="aspect-square rounded-xl overflow-hidden bg-stone-900 border border-amber-800/30 hover:border-amber-500/60 transition-colors cursor-pointer"
                     >
                         <img
                             src={photo.src}
                             alt={photo.label}
                             className="w-full h-full object-cover"
                         />
-                    </div>
+                    </button>
                 ))}
             </div>
+
+            <Lightbox imageUrl={selected} onClose={() => setSelected(null)} />
         </div>
     )
 }

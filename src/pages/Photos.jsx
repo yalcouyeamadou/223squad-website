@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../supabaseClient'
+import Lightbox from '../components/Lightbox'
 
 function Photos() {
     const [photos, setPhotos] = useState([])
     const [loading, setLoading] = useState(true)
+    const [selected, setSelected] = useState(null)
 
     useEffect(() => {
         async function fetchPhotos() {
@@ -38,14 +40,17 @@ function Photos() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {photos.map((url, i) => (
-                    <div
+                    <button
                         key={i}
-                        className="aspect-square rounded-xl overflow-hidden bg-stone-900 border border-amber-800/30 hover:border-amber-500/60 transition-colors"
+                        onClick={() => setSelected(url)}
+                        className="aspect-square rounded-xl overflow-hidden bg-stone-900 border border-amber-800/30 hover:border-amber-500/60 transition-colors cursor-pointer"
                     >
                         <img src={url} alt={`Photo ${i + 1}`} className="w-full h-full object-cover" />
-                    </div>
+                    </button>
                 ))}
             </div>
+
+            <Lightbox imageUrl={selected} onClose={() => setSelected(null)} />
         </div>
     )
 }
