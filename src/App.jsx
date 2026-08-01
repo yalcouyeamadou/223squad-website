@@ -12,7 +12,7 @@ import Admin from './pages/Admin'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-stone-950 text-stone-100">
+    <div className="min-h-screen flex flex-col bg-white text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors">
       <Navbar />
       <main className="flex-1">
         <Routes>

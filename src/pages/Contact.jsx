@@ -26,41 +26,32 @@ const socials = [
 function Contact() {
     return (
         <div className="px-6 py-16 max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl font-extrabold mb-2">
+            <h1 className="text-4xl font-extrabold mb-2 text-stone-900 dark:text-white">
                 Contacte <span className="text-amber-500">223SQUAD</span>
             </h1>
-            <p className="text-stone-400 mb-10">
+            <p className="text-stone-600 dark:text-stone-400 mb-10">
                 L'union en bloc, la voix du 223.
             </p>
 
-
-            <a href="tel:+22390003890"
-                className="inline-flex items-center gap-3 bg-stone-900 border border-amber-800/40 rounded-xl px-6 py-4 mb-10 hover:border-amber-500/60 transition-colors">
-
+            <a href="tel:+22390003890" className="inline-flex items-center gap-3 bg-stone-100 dark:bg-stone-900 border border-amber-800/30 dark:border-amber-800/40 rounded-xl px-6 py-4 mb-10 hover:border-amber-500/60 transition-colors">
                 <Phone className="text-amber-500" size={24} />
-                <span className="text-xl font-semibold tracking-wide">
+                <span className="text-xl font-semibold tracking-wide text-stone-900 dark:text-white">
                     (+223) 90 00 38 90
                 </span>
             </a>
 
             <div className="flex justify-center gap-6">
                 {socials.map((s) => (
-
-                    <a key={s.label}
-                        href={s.href}
-                        aria-label={s.label}
-                        className="text-stone-300 hover:text-amber-500 transition-colors"
-                    >
+                    <a key={s.label} href={s.href} aria-label={s.label} className="text-stone-600 dark:text-stone-300 hover:text-amber-500 transition-colors">
                         <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
                             <path d={s.path} />
                         </svg>
                     </a>
-                ))
-                }
-            </div >
+                ))}
+            </div>
 
             <p className="text-stone-500 text-sm mt-10">#223SQUAD</p>
-        </div >
+        </div>
     )
 }
 
